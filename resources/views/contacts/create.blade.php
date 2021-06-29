@@ -1,6 +1,6 @@
-@extends('base') <!-- base.blade.php 확장 -->
+@extends('base')
 
-@section('main') <!-- main 섹션 내용 -->
+@section('main')
 <div class="row">
     <div class="col-sm-8 offset-sm-2">
         <h1 class="display-3">Add a contact</h1>
@@ -39,8 +39,8 @@
                 <div class="form-group">
                     <label for="job_title">Job Title:</label>
                     <input type="text" class="form-control" name="job_title"/>
-                </div>
-                <button type="submit" class="btn btn-primary-outline">Add Contact</button>
+                </div><br/>
+                <button type="submit" class="btn btn-outline-primary">Add Contact</button>
             </form>
         </div>
     </div>
