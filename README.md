@@ -7,9 +7,9 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## 폴더 구조 및 설명
+## Directory structure
 ![9930B6475A601E8825](https://user-images.githubusercontent.com/41939976/123591485-fe325380-d826-11eb-917e-a7bd31d242af.png)
-## 학습 내용
+## Studying
 * https://medium.com/techiediaries-com/laravel-7-crud-tutorial-build-a-crud-app-with-mysql-and-bootstrap-4-4ed8e94f2db0 참고
 * php artisan serve
 * .env 파일 수정
