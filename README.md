@@ -9,11 +9,13 @@
 
 ## 폴더 구조 및 설명
 ![9930B6475A601E8825](https://user-images.githubusercontent.com/41939976/123591485-fe325380-d826-11eb-917e-a7bd31d242af.png)
-## 내용 복습
+## 학습 내용
+* https://medium.com/techiediaries-com/laravel-7-crud-tutorial-build-a-crud-app-with-mysql-and-bootstrap-4-4ed8e94f2db0 참고
 * php artisan serve
 * .env 파일 수정
-* php artisan make:model 테이블명 -m(또는 --migration)
+* php artisan make:model 테이블명(member) -m(또는 --migration)
 * php artisan migrate
+* php artisan make:controller 컨트롤러명(memberController) --resource
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
