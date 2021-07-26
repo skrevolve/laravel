@@ -13,6 +13,11 @@
 * https://medium.com/techiediaries-com/laravel-7-crud-tutorial-build-a-crud-app-with-mysql-and-bootstrap-4-4ed8e94f2db0 참고
 * php artisan serve
 * .env 파일 수정
+* env 파일이 없고 aphp rtisan serve 했는데도 500 에러가 뜰경우
+  1. cp env.excample .env
+  2. php artisan ket:generate
+  3. php artisan config:cache
+  4. php artisan config:clear
 * php artisan make:model 테이블명(member) -m(또는 --migration)
 * php artisan migrate
 * php artisan make:controller 컨트롤러명(memberController) --resource
