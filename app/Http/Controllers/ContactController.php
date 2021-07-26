@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Contact;
 use Illuminate\Http\Request;
+use App\Contact;
 
 class ContactController extends Controller
 {
@@ -14,7 +14,9 @@ class ContactController extends Controller
      */
     public function index()
     {
-        //
+        $contacts = Contact::all();
+        
+        return view('contacts.index', compact('contacts'));
     }
 
     /**
@@ -49,6 +51,7 @@ class ContactController extends Controller
             'city' => $request->get('city'),
             'country' => $request->get('country')
         ]);
+
         $contact->save();
         return redirect('/contacts')->with('success', 'Contact saved!');
     }
@@ -72,7 +75,9 @@ class ContactController extends Controller
      */
     public function edit($id)
     {
-        //
+        $contact = Contact::find($id);
+
+        return view('contacts.edit', compact('contact'));
     }
 
     /**
@@ -84,7 +89,22 @@ class ContactController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'first_name'=>'required',
+            'last_name'=>'required',
+            'email'=>'required'
+        ]);
+
+        $contact = Contact::find($id); // ORM 표기방식. 코틀린과 매우 흡사
+        $contact->first_name = $request->get('first_name');
+        $contact->last_name = $request->get('last_name');
+        $contact->email = $request->get('email');
+        $contact->job_title = $request->get('job_title');
+        $contact->city = $request->get('city');
+        $contact->country = $request->get('country');
+        $contact->save();
+
+        return redirect('/contacts')->with('success', 'Contact updated!');
     }
 
     /**
@@ -95,6 +115,9 @@ class ContactController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $contact = Contact::find($id);
+        $contact->delete();
+
+        return redirect('/contacts')->with('success', 'Contact deleted!');
     }
 }

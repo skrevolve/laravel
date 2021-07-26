@@ -14,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('contacts/base');
 });
+
+// Route::resource('contacts', 'ContactController');
+
+Route::resource('contacts', ContactController::class);
