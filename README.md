@@ -13,13 +13,16 @@
 * https://medium.com/techiediaries-com/laravel-7-crud-tutorial-build-a-crud-app-with-mysql-and-bootstrap-4-4ed8e94f2db0 참고
 * php artisan serve
 * .env 파일 수정
-* env 파일이 없고 aphp rtisan serve 했는데도 500 에러가 뜰경우
+* env 파일이 없고 php artisan serve 했는데도 500 에러가 뜰경우
   1. cp env.excample .env
   2. php artisan ket:generate
   3. php artisan config:cache
   4. php artisan config:clear
 * php artisan make:model 테이블명(member) -m(또는 --migration)
 * php artisan migrate
+  1. 중간에 기존의 추가된 마이그레이션 내용을 변경하고싶다면
+  2. php artisan migrate_reset 후 다시 php artisan migrate 실행하게되면 이전에 했던 마이그레이션 정보를 초기화한후 다시 마이그레이션한다.
+  3. 아니면 해당 원하는 파일만 지우고 다시 생성하거나, 이름을바꿔서 path경로를 인식하지못하게해도 된다.
 * php artisan make:controller 컨트롤러명(memberController) --resource
 ## About Laravel
 
