@@ -10,7 +10,7 @@
     <thead>
         <tr>
           <td>아이디</td>
-          <td>이 름</td>
+          <td>이름</td>
           <td>이메일</td>
           <td>직업</td>
           <td>도시</td>
