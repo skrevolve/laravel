@@ -5,16 +5,16 @@
 </div>
 <div class="row">
 <div class="col-sm-12">
-    <h1 class="display-3">Contacts</h1>    
+    <h1 class="display-3">Contacts</h1>
   <table class="table table-striped">
     <thead>
         <tr>
-          <td>ID</td>
-          <td>Name</td>
-          <td>Email</td>
-          <td>Job Title</td>
-          <td>City</td>
-          <td>Country</td>
+          <td>아이디</td>
+          <td>이름</td>
+          <td>이메일</td>
+          <td>직업</td>
+          <td>도시</td>
+          <td>나라</td>
           <td colspan = 2>Actions</td>
         </tr>
     </thead>
@@ -46,7 +46,7 @@
 <div class="col-sm-12">
     @if(session()->get('success'))
         <div class="alert alert-success">
-        {{ session()->get('success') }}  
+        {{ session()->get('success') }}
         </div>
     @endif
 </div>
