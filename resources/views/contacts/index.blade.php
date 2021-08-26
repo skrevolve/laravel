@@ -1,10 +1,5 @@
 @extends('base')
 @section('main')
-    <?php
-    $collection = collect([null]);
-    $collection2 = collect([2]);
-    echo isset($collection[0]);
-    echo isset($collection2[0]);?>
 <div>
     <a style="margin: 19px;" href="{{ route('contacts.create')}}" class="btn btn-primary">New contact</a>
 </div>

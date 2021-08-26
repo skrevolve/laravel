@@ -13,10 +13,29 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Route::get('/', function () {
+//    return view('tasks');
+//});
+
+/**
+ * Task 대시보드
+ */
 Route::get('/', function () {
-    return view('base');
+    return view('tasks');
 });
 
-// Route::resource('contacts', 'ContactController');
+/**
+ * Task 추가
+ */
+Route::post('/task', function (Request $request) {
+
+});
+
+/**
+ * Task 삭제
+ */
+Route::delete('/task/{task}', function (Task $task) {
+    //
+});
 
 Route::resource('contacts', ContactController::class);
