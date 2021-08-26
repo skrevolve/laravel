@@ -1,5 +1,10 @@
 @extends('base')
 @section('main')
+    <?php
+    $collection = collect([null]);
+    $collection2 = collect([2]);
+    echo isset($collection[0]);
+    echo isset($collection2[0]);?>
 <div>
     <a style="margin: 19px;" href="{{ route('contacts.create')}}" class="btn btn-primary">New contact</a>
 </div>
@@ -15,7 +20,7 @@
           <td>직업</td>
           <td>도시</td>
           <td>나라</td>
-          <td colspan = 2>Actions</td>
+          <td colspan=2>수정</td>
         </tr>
     </thead>
     <tbody>
